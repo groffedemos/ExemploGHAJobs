@@ -22,7 +22,9 @@ jobs:
 
     steps:
       - name: Mensagem
-        run: echo Segundo job
+        run: |
+          echo Segundo job
+          date -d "-3 hours"
 
   job03:
     runs-on: ubuntu-latest
@@ -30,8 +32,9 @@ jobs:
 
     steps:
       - name: Mensagem
-        run: echo Terceiro job
-
+        run: |
+          echo Terceiro job
+          date -d "-3 hours"
 
   job04:
     runs-on: ubuntu-latest
@@ -39,4 +42,6 @@ jobs:
 
     steps:
       - name: Mensagem
-        run: echo Quarto job
+        run: |
+          echo Quarto job
+          date -d "-3 hours"
