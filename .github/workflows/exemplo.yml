@@ -1,0 +1,42 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+
+jobs:
+  job01:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Mensagem
+        run: echo Primeiro job
+
+  job02:
+    runs-on: ubuntu-latest
+    needs: [job01]
+
+    steps:
+      - name: Mensagem
+        run: echo Segundo job
+
+  job03:
+    runs-on: ubuntu-latest
+    needs: [job02]
+
+    steps:
+      - name: Mensagem
+        run: echo Terceiro job
+
+
+  job04:
+    runs-on: ubuntu-latest
+    needs: [job01]
+
+    steps:
+      - name: Mensagem
+        run: echo Quarto job
