@@ -1,5 +1,3 @@
-# This is a basic workflow to help you get started with Actions
-
 name: CI
 on:
   push:
@@ -14,7 +12,9 @@ jobs:
 
     steps:
       - name: Mensagem
-        run: echo Primeiro job
+        run: |
+          date -d "-3 hours"
+          echo Primeiro job
 
   job02:
     runs-on: ubuntu-latest
